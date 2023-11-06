@@ -25,14 +25,14 @@ services:
   vproapp:
     image: vprocontainers/vprofileapp
     ports:
-      - "8080:8081"
+      - "8081:8081"
     volumes: 
       - vproappdata:/usr/local/tomcat/webapps
 
   vproweb:
     image: vprocontainers/vprofileweb
     ports:
-      - "80:81"
+      - "81:81"
 volumes:
   vprodbdata: {}
   vproappdata: {}
