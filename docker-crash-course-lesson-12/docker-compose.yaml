@@ -1,0 +1,16 @@
+version: '3.8'
+services:
+  api:
+    build: ./api
+    container_name: node_con
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./api:/app
+      - ./app/node_modules
+  myblog:
+    build: ./myblog
+    container_name: react_con
+    ports: 
+     - '3000:3000'
+    stdin_open: true
